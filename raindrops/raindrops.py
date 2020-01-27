@@ -1,16 +1,14 @@
+word = {3: 'Pling',
+        5: 'Plang',
+        7: 'Plong'}
+
+
 def convert(number):
-    word = {3: 'Pling',
-            5: 'Plang',
-            7: 'Plong'}
 
     result = ''
 
-    for key in word:
+    for key, value in word.items():
         if number % key is 0:
-            result += word[key]
+            result += value
 
-    if result is '':
-        return str(number)
-    else:
-        return result
-
+    return str(number) if not result else result
